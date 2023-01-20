@@ -1,30 +1,46 @@
 package ramgames.ramrender.listeners;
 
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
-public interface MouseController extends MouseListener {
-    @Override
-    default void mouseClicked(MouseEvent var1) {
-    }
+public interface MouseController extends MouseListener, MouseMotionListener, MouseWheelListener {
 
     @Override
-    default void mousePressed(MouseEvent var1) {
+    default void mouseClicked(MouseEvent mouseEvent) {
 
     }
 
     @Override
-    default void mouseReleased(MouseEvent var1) {
+    default void mousePressed(MouseEvent mouseEvent) {
+        // USELESS. SAME AS CLICKED.
+    }
+
+    @Override
+    default void mouseReleased(MouseEvent mouseEvent) {
 
     }
 
     @Override
-    default void mouseEntered(MouseEvent var1) {
+    default void mouseEntered(MouseEvent mouseEvent) {
 
     }
 
     @Override
     default void mouseExited(MouseEvent mouseEvent) {
+
+    }
+
+    @Override
+    default void mouseDragged(MouseEvent mouseEvent) {
+
+    }
+
+    @Override
+    default void mouseMoved(MouseEvent mouseEvent) {
+
+    }
+
+    @Override
+    default void mouseWheelMoved(MouseWheelEvent mouseEvent) {
 
     }
 }
